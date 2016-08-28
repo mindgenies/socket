@@ -9,11 +9,12 @@ io.on('connection', function (socket)
 	console.log("user connected");
 
 	socket.on('message', function (message) {
-		socket.broadcast.emit('message',message);
+		//socket.broadcast.emit('message',message);
+		io.emit('message',message);
 	});
 
 	socket.emit('message', {
-		text: "Hi Client"
+		text: "Welcome to chat system!"
 	});
 });
 
