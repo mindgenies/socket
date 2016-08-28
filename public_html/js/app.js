@@ -5,8 +5,8 @@ socket.on('connect', function () {
 
 socket.on('message', function (message){
 	console.log(message.text);
-	$(".chat").append("<p>"+message.text+"</p>");
-});
+	$(".chat").append("<p><b>" + moment.utc(message.timeStamp).local().format("h: mm a") + "</b> "+message.text+"</p>");
+}); 
 
 
 $(document).ready(function(){
