@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Socket</title>	
+	<title>Chat Page</title>	
 </head>
-<body> 
-	<div class="chat"></div>
-	<form name="chatit">
-		<input type="text" id="mytext" name="" />
-		<input type="button" id="sendit" value="Send" />
+<body> 	
+	<form name="chatit" action="chat.html">
+	    Name: <input type="text"  name="name" /> <br/>
+	    Room: <input type="text"  name="room" /> <br/>
+		<input type="submit" value="Start Chat" />
 	</form>
-	<script src="js/jquery-3.1.0.min.js"></script>
-	<script src="js/socket.io-1.4.5.js"></script>
-	<script src="js/moment.js"></script>
-	<script src="js/app.js"></script>
 </body>
 </html>
